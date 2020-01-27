@@ -3,7 +3,6 @@ class UserInfo{
   String userEmail;//declaration of instance variable of type string.
   int userPhone;//declaration of instance variable of type int.
 
-  Map userMap = Map();// creation of map reference variable.
 //Settters and Getters to set the value and to get the value. 
    set UserEmail(String email){
     userEmail=email;

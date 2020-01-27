@@ -1,30 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:mapproject1/model/userdetails.dart';
+import 'package:mapproject1/model/mapModel.dart';
+import 'package:mapproject1/model/userdetailsModel.dart';
 
 void main() { 
   runApp(MyApp());
 
+   List emailList = new List();//creation of dynamic list.
+   List phoneList = new List();//creation of dynamic list.
+
   UserInfo userInfo = new UserInfo();//Object creation of model class(UserInfo).
+ // UserMap mapClassObj = new UserMap();//object creation of model classs(mapModel)
   userInfo.UserEmail ='ganesh@gmail.com';//calling setter method to set emailId of user.
   userInfo.UserPhone=1234567890;//calling setter method to set phone no. of user.
-  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;// inserting data into map.
+  emailList.add(userInfo.UserEmail);//adding user email in emailList.
+  phoneList.add(userInfo.UserPhone);//adding user phone no. in phoneList.
+  //mapClassObj.userMap[userInfo.UserEmail]=userInfo.UserPhone;// inserting data into map.
   //userInfo.getUserEmail is getter method which returns the emailId of user.
   //userInfo.getUserPhone is getter method which returns the phone no. of user.
-
+  
   userInfo.UserEmail ='ranjit@gmail.com';
   userInfo.UserPhone=4567891230;
-  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
+  emailList.add(userInfo.UserEmail);//adding user email in emailList.
+  phoneList.add(userInfo.UserPhone);//adding user phone no. in phoneList.
+  //mapClassObj.userMap[userInfo.UserEmail]=userInfo.UserPhone;
 
   userInfo.UserEmail ='shankar@gmail.com';
   userInfo.UserPhone=7894561230;
-  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
+  emailList.add(userInfo.UserEmail);
+  phoneList.add(userInfo.UserPhone);
+  //mapClassObj.userMap[userInfo.UserEmail]=userInfo.UserPhone;
 
   userInfo.UserEmail ='prabhuji@gmail.com';
   userInfo.UserPhone=7852146930;
-  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
+  //mapClassObj.userMap[userInfo.UserEmail]=userInfo.UserPhone;
 
-
-  print(userInfo.userMap);
+  emailList.add(userInfo.UserEmail);
+  phoneList.add(userInfo.UserPhone);
+  print(emailList);//printing emailList data
+  print(phoneList);//printing phoneList data
+  
+  Map userMap = Map.fromIterables(emailList,phoneList);//converting List to Map 
+  print(userMap);//printing map data.
 }
 
 class MyApp extends StatelessWidget {
