@@ -5,19 +5,19 @@ class UserInfo{
 
   Map userMap = Map();// creation of map reference variable.
 //Settters and Getters to set the value and to get the value. 
-   set getUserEmail(String email){
+   set UserEmail(String email){
     userEmail=email;
   }
 
-  String get getUserEmail{
+  String get UserEmail{
     return userEmail;
   }
 
-  set getUserPhone(int phone){
+  set UserPhone(int phone){
     userPhone=phone;
   }
 
-  int get getUserPhone{
+  int get UserPhone{
     return userPhone;
   }
 }

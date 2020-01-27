@@ -5,19 +5,24 @@ void main() {
   runApp(MyApp());
 
   UserInfo userInfo = new UserInfo();//Object creation of model class(UserInfo).
-  userInfo.getUserEmail ='ganesh@gmail.com';//calling setter method to set emailId of user.
-  userInfo.getUserPhone=1234567890;//calling setter method to set phone no. of user.
-  userInfo.userMap[userInfo.getUserEmail]=userInfo.getUserPhone;// inserting data into map.
+  userInfo.UserEmail ='ganesh@gmail.com';//calling setter method to set emailId of user.
+  userInfo.UserPhone=1234567890;//calling setter method to set phone no. of user.
+  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;// inserting data into map.
   //userInfo.getUserEmail is getter method which returns the emailId of user.
   //userInfo.getUserPhone is getter method which returns the phone no. of user.
 
-  userInfo.getUserEmail ='ranjit@gmail.com';
-  userInfo.getUserPhone=4567891230;
-  userInfo.userMap[userInfo.getUserEmail]=userInfo.getUserPhone;
+  userInfo.UserEmail ='ranjit@gmail.com';
+  userInfo.UserPhone=4567891230;
+  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
 
-  userInfo.getUserEmail ='shankar@gmail.com';
-  userInfo.getUserPhone=7894561230;
-  userInfo.userMap[userInfo.getUserEmail]=userInfo.getUserPhone;
+  userInfo.UserEmail ='shankar@gmail.com';
+  userInfo.UserPhone=7894561230;
+  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
+
+  userInfo.UserEmail ='prabhuji@gmail.com';
+  userInfo.UserPhone=7852146930;
+  userInfo.userMap[userInfo.UserEmail]=userInfo.UserPhone;
+
 
   print(userInfo.userMap);
 }
